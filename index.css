@@ -1,46 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: #333333;
+  --text-light-color: #424141;
+  --link-color: #014c7e;
+  --btn-bg: #0094f6;
+}
+
 body {
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  user-select: none;
-}
-
-p {
-  font-size: 5rem;
-  color: white;
-  width: 500px;
-  height: 500px;
-  margin: auto;
-  background-color: cornflowerblue;
-  background-image: linear-gradient(19deg, cornflowerblue 0%, crimson 100%);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-  animation: morphing 10s infinite;
-  overflow: hidden;
-  cursor: url(https://cdn.custom-cursor.com/db/7476/32/minimal-apple-cursor.png),
-    default;
-}
-
-/* https://codepen.io/nickylew/pen/GYMoKM */
-@keyframes morphing {
-  0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-  }
-  25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-  }
-  50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
-  }
-  75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-  }
-}
-
-.center {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.instagram-container {
+  width: 550px;
+  background-color: #fafafa;
+  border-radius: 2px;
+  padding: 8px 20px;
+}
+
+/* header  */
+header {
+  height: 40px;
+  padding: 20px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back {
+  cursor: pointer;
+}
+
+.back svg {
+  width: 26px;
+  height: 26px;
+  color: var(--primary-text-color);
+  transform: rotate(90deg);
+}
+
+.username span {
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--primary-text-color);
+}
+
+.blue-tik {
+  position: relative;
+  padding-left: 8px;
+}
+
+.blue-tik-svg {
+  position: absolute;
+  top: 7px;
+}
+
+.menu {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu span {
+  width: 5px;
+  height: 5px;
+  display: block;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: var(--primary-text-color);
+}
+
+/* story  follower  following  post */
+
+.story-follower-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.story-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: aqua;
+  background-image: linear-gradient(45deg, #f5a74d, #981385);
+  padding: 4px;
+}
+
+.story-white-line {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 3px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.profile-image svg {
+  width: 100%;
+  height: 100%;
+}
+
+.follower-area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 50px;
+}
+
+.post-counter,
+.follower-counter,
+.following-counter {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+
+.post,
+.follower,
+.following {
+  text-align: center;
+}
+
+.post-text,
+.follower-text,
+.following-text {
+  color: var(--text-light-color);
+  font-size: 19px;
+}
+
+/*  BIO  */
+.page-detail-area {
+  padding-right: 50px;
+}
+
+.page-detail-area .username {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--primary-text-color);
+}
+
+.page-detail-area .bio {
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--text-light-color);
+}
+
+.stiker {
+  color: rgb(218, 29, 29);
+}
+
+.page-detail-area .link a {
+  font-size: 20px;
+  line-height: 1.3;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+/* follow-button-area */
+.follow-button-area {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px;
+}
+
+.follow-btn,
+.message-btn,
+.suggest-btn {
+  height: 100%;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.follow-btn {
+  flex: 1;
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid var(--btn-bg);
+  background-color: var(--btn-bg);
+}
+
+.message-btn {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+  border: 2px solid rgb(219, 219, 219);
+}
+
+.suggest-btn {
+  color: var(--primary-text-color);
+  width: 45px;
+  border: 2px solid rgb(219, 219, 219);
+}
+
+.suggest-btn svg {
+  width: 30px;
+  height: 100%;
+  color: red !important;
 }
