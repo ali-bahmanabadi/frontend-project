@@ -126,24 +126,17 @@ header {
   justify-content: space-between;
   padding: 0 30px 0 50px;
 }
-
-.post-counter,
-.follower-counter,
-.following-counter {
+.counter {
   font-size: 25px;
   font-weight: bold;
   color: var(--primary-text-color);
 }
 
-.post,
-.follower,
-.following {
+.detail-area {
   text-align: center;
 }
 
-.post-text,
-.follower-text,
-.following-text {
+.text {
   color: var(--text-light-color);
   font-size: 19px;
 }
@@ -166,7 +159,7 @@ header {
   color: var(--text-light-color);
 }
 
-.stiker img{
+.stiker img {
   width: 20px;
   height: 20px;
 }
