@@ -12,10 +12,11 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #000;
   font-family: 'Roboto', sans-serif;
 }
@@ -25,6 +26,7 @@ body {
   background-color: #fafafa;
   border-radius: 2px;
   padding: 8px 20px;
+  margin: 50px;
 }
 
 /* header  */
@@ -40,7 +42,7 @@ header {
   cursor: pointer;
 }
 
-.back svg {
+.back img {
   width: 26px;
   height: 26px;
   color: var(--primary-text-color);
@@ -58,7 +60,9 @@ header {
   padding-left: 8px;
 }
 
-.blue-tik-svg {
+.blue-tik img {
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 7px;
 }
@@ -79,7 +83,6 @@ header {
 }
 
 /* story  follower  following  post */
-
 .story-follower-area {
   display: flex;
   justify-content: space-between;
@@ -90,9 +93,10 @@ header {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: aqua;
   background-image: linear-gradient(45deg, #f5a74d, #981385);
   padding: 4px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .story-white-line {
@@ -110,7 +114,7 @@ header {
   border: 1px solid rgb(202, 202, 202);
 }
 
-.profile-image svg {
+.profile-image img {
   width: 100%;
   height: 100%;
 }
@@ -162,8 +166,9 @@ header {
   color: var(--text-light-color);
 }
 
-.stiker {
-  color: rgb(218, 29, 29);
+.stiker img{
+  width: 20px;
+  height: 20px;
 }
 
 .page-detail-area .link a {
@@ -214,8 +219,7 @@ header {
   border: 2px solid rgb(219, 219, 219);
 }
 
-.suggest-btn svg {
+.suggest-btn img {
   width: 30px;
   height: 100%;
-  color: red !important;
 }
